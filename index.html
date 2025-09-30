@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcul Temps de Sortie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⏱ Suivi de mes sorties</h1>
+    <div class="form">
+      <label>Heure prévue :</label>
+      <input type="time" id="plannedTime">
+      <label>Date & heure de sortie :</label>
+      <input type="datetime-local" id="actualTime">
+      <button onclick="addEntry()">Ajouter</button>
+    </div>
+    <div class="summary">
+      <h2>Total cumulé : <span id="total">0</span> minutes</h2>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Heure prévue</th>
+          <th>Heure sortie</th>
+          <th>Minutes</th>
+        </tr>
+      </thead>
+      <tbody id="records"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
