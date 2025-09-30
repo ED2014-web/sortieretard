@@ -3,32 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calcul Temps de Sortie</title>
+  <title>Suivi des Sorties</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>⏱ Suivi de mes sorties</h1>
-    <div class="form">
-      <label>Heure prévue :</label>
-      <input type="time" id="plannedTime">
-      <label>Date & heure de sortie :</label>
-      <input type="datetime-local" id="actualTime">
-      <button onclick="addEntry()">Ajouter</button>
+    <h1>⏱ Suivi des sorties</h1>
+
+    <div class="person" id="elouan">
+      <h2>👦 Elouan</h2>
+      <div class="form">
+        <label>Heure prévue :</label>
+        <input type="time" id="plannedTime-elouan">
+        <label>Date & heure de sortie :</label>
+        <input type="datetime-local" id="actualTime-elouan">
+        <button onclick="addEntry('elouan')">Ajouter</button>
+      </div>
+      <div class="summary">
+        <h3>Total cumulé : <span id="total-elouan">0</span> minutes</h3>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Heure prévue</th>
+            <th>Heure sortie</th>
+            <th>Minutes</th>
+          </tr>
+        </thead>
+        <tbody id="records-elouan"></tbody>
+      </table>
     </div>
-    <div class="summary">
-      <h2>Total cumulé : <span id="total">0</span> minutes</h2>
+
+    <div class="person" id="gabriel">
+      <h2>👦 Gabriel</h2>
+      <div class="form">
+        <label>Heure prévue :</label>
+        <input type="time" id="plannedTime-gabriel">
+        <label>Date & heure de sortie :</label>
+        <input type="datetime-local" id="actualTime-gabriel">
+        <button onclick="addEntry('gabriel')">Ajouter</button>
+      </div>
+      <div class="summary">
+        <h3>Total cumulé : <span id="total-gabriel">0</span> minutes</h3>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Heure prévue</th>
+            <th>Heure sortie</th>
+            <th>Minutes</th>
+          </tr>
+        </thead>
+        <tbody id="records-gabriel"></tbody>
+      </table>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Heure prévue</th>
-          <th>Heure sortie</th>
-          <th>Minutes</th>
-        </tr>
-      </thead>
-      <tbody id="records"></tbody>
-    </table>
+
+    <div class="person" id="timeo">
+      <h2>👦 Timéo</h2>
+      <div class="form">
+        <label>Heure prévue :</label>
+        <input type="time" id="plannedTime-timeo">
+        <label>Date & heure de sortie :</label>
+        <input type="datetime-local" id="actualTime-timeo">
+        <button onclick="addEntry('timeo')">Ajouter</button>
+      </div>
+      <div class="summary">
+        <h3>Total cumulé : <span id="total-timeo">0</span> minutes</h3>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Heure prévue</th>
+            <th>Heure sortie</th>
+            <th>Minutes</th>
+          </tr>
+        </thead>
+        <tbody id="records-timeo"></tbody>
+      </table>
+    </div>
+
   </div>
   <script src="script.js"></script>
 </body>
